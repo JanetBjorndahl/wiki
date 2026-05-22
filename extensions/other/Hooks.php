@@ -434,6 +434,7 @@ function wrAbortNewAccount($user=NULL, &$abortError) {
 function wrAddContentActions(&$template, &$content_actions) {
 	global $wgRequest;
 
+/* Pedigree-map menu item removed until map functionality is fixed (if ever) as per WAC Apr 2026 - May 2026 by Janet Bjorndahl 
    if ($template->mUser->isLoggedIn() && $template->mTitle->getArticleId() &&     // login requirement added Mar 2025 by Janet Bjorndahl
          ($template->mTitle->getNamespace() == NS_PERSON || $template->mTitle->getNamespace() == NS_FAMILY)) {
 		$t = Title::makeTitle( NS_SPECIAL, 'ShowPedigree' );
@@ -444,7 +445,8 @@ function wrAddContentActions(&$template, &$content_actions) {
 			'href' => $t->getLocalUrl( 'pagetitle='.$template->mTitle->getPrefixedURL()),
 		);
    }
-   	
+*/
+/* Email menu item removed (permanently) - May 2026 by Janet Bjorndahl  	
    if ($template->mUser->isLoggedIn() && $template->mTitle->getArticleId() 
    	&& FamilyTreeUtil::isTreePage($template->mTitle->getNamespace(), $template->mTitle->getDBkey())) {
    	// add share button
@@ -456,7 +458,7 @@ function wrAddContentActions(&$template, &$content_actions) {
 			'href' => $t->getLocalUrl( 'returnto='.$template->mTitle->getPrefixedURL()),
 		);
   	}
-
+*/
    if ($template->mUser->isLoggedIn() && $template->mTitle->getArticleId() &&      // login requirement added Mar 2025 by Janet Bjorndahl
          ($template->mTitle->getNamespace() == NS_PERSON || $template->mTitle->getNamespace() == NS_FAMILY)) {
 		$t = Title::makeTitle( NS_SPECIAL, 'Search' );
