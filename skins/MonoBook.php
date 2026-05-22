@@ -352,7 +352,8 @@ END;
       'suggestions'=>'WeRelate:Suggestions'
   );
   // 'requestdelete' added Jan 2021 by Janet Bjorndahl
-  $moreActions = array('protect', 'unprotect','delete', 'requestdelete', 'share','pedigree', 'match', 'compare-parents', 'compare-spouses', 'compare-husbands', 'compare-wives');
+  // email menu item removed (permanently), pedigree-map menu item removed until map functionality is fixed (if ever) - May 2026 Janet Bjorndahl (the latter as per WAC Apr 2026)
+  $moreActions = array('protect', 'unprotect','delete', 'requestdelete', /* 'share','pedigree', */ 'match', 'compare-parents', 'compare-spouses', 'compare-husbands', 'compare-wives');
   ?>
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->

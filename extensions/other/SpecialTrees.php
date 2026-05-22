@@ -509,7 +509,9 @@ END
    	$skin =& $wgUser->getSkin();
 
       $ret = '<div id="familytree-table"><table width="99%" cellpadding="5" cellspacing="0" border="0">'.
-              '<tr><td><b>Name</b></td><td><b>Pages</b></td><td><b>Imported GEDCOMs</b></td><td><b>Check for issues</b></td><td><b>Export a GEDCOM</b></td><td><b>Rename / Merge tree</b></td><td><b>Related pages not in tree</b></td><td><b>Other watchers</b></td><td><b>E-mail (share)</b></td><td><b>Deletion impact</b></td></tr>';   // Delete tree removed Dec 2020 by Janet Bjorndahl
+              '<tr><td><b>Name</b></td><td><b>Pages</b></td><td><b>Imported GEDCOMs</b></td><td><b>Check for issues</b></td><td><b>Export a GEDCOM</b></td><td><b>Rename / Merge tree</b></td><td><b>Related pages not in tree</b></td><td><b>Other watchers</b></td></tr>';   // Email and deletion impact removed May 2026 by Janet Bjorndahl (as per WAC Jan 2026)
+/*      $ret = '<div id="familytree-table"><table width="99%" cellpadding="5" cellspacing="0" border="0">'.
+              '<tr><td><b>Name</b></td><td><b>Pages</b></td><td><b>Imported GEDCOMs</b></td><td><b>Check for issues</b></td><td><b>Export a GEDCOM</b></td><td><b>Rename / Merge tree</b></td><td><b>Related pages not in tree</b></td><td><b>Other watchers</b></td><td><b>E-mail (share)</b></td><td><b>Deletion impact</b></td></tr>';   // Delete tree removed Dec 2020 by Janet Bjorndahl */
 /*
       $ret = '<div id="familytree-table"><table width="99%" cellpadding="5" cellspacing="0" border="0">'.
               '<tr><td><b>Name</b></td><td><b>Pages</b></td><td><b>Imported GEDCOMs</b></td><td><b>Export a GEDCOM</b></td><td><b>Rename / Merge tree</b></td><td><b>Related pages not in tree</b></td><td><b>Other watchers</b></td><td><b>E-mail (share)</b></td><td><b>Deletion impact</b></td><td><b>Delete</b></td></tr>';
@@ -546,7 +548,8 @@ END
                 wfArrayToCGI(array('mode' => 'explore', 'user' => $wgUser->getName(), 'tree' => $familyTree['name'], 'liststart' => '0', 'listrows' => '20', 'listns' => '')));
               $ret .= " (&nbsp;$explore&nbsp;)";
               }
-            $ret .= '</span><td>' . $familyTree['count'] . "</td><td>$gedcom</td><td>$quality</td><td>$export</td><td>$rename</td><td>$relatedPages</td><td>$countWatchers</td><td>$email</td><td>$deletionImpact</td></tr>";   // delete tree link removed Dec 2020 by Janet Bjorndahl
+            $ret .= '</span><td>' . $familyTree['count'] . "</td><td>$gedcom</td><td>$quality</td><td>$export</td><td>$rename</td><td>$relatedPages</td><td>$countWatchers</td></tr>";   // email and deletion impact links removed May 2026 by Janet Bjorndahl
+/*            $ret .= '</span><td>' . $familyTree['count'] . "</td><td>$gedcom</td><td>$quality</td><td>$export</td><td>$rename</td><td>$relatedPages</td><td>$countWatchers</td><td>$email</td><td>$deletionImpact</td></tr>";   // delete tree link removed Dec 2020 by Janet Bjorndahl */
 /*            
             $ret .= '</span><td>' . $familyTree['count'] . "</td><td>$gedcom</td><td>$export</td><td>$rename</td><td>$relatedPages</td><td>$countWatchers</td><td>$email</td><td>$deletionImpact</td><td>$delete</td></tr>";
 */            
