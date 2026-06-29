@@ -233,7 +233,7 @@ function mhAd($input, $argv, $parser) {
      }
    }
    return <<< END
-<div style="margin: -23px 0 16px 0;">
+<div style="margin: 0 0 16px 0;">
 <iframe src="https://www.myheritage.com/FP/partner-widget.php?partnerName=werelate&clientId=3401&campaignId=werelate_widgets_+aug19&widget=records_carousel&width=728&height=90&onSitePlacement=Search+People_728x90_records&tr_ifid=werelate_252927986&firstName=$firstName&lastName=$lastName&tr_device=$device&size=728x90" frameborder="0" scrolling="no" width="728" height="90"></iframe></div>
 END;
 }
