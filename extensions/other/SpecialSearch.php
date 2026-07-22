@@ -1856,9 +1856,11 @@ END;
 	public function getSearchResultsHtml($searchServerQuery) {
 		global $wgOut, $wgScriptPath, $http_response_header, $wgUser;
 
-    // Bot activity overwhelms the search server. Therefore, users are not allowed to search unless they are logged in. 
-    if (!$wgUser->isLoggedIn()) {
-      return array('', "<p><font color=\"red\">You must be signed in to search.</font></p>");
+    // Bot activity overwhelms the search server. Therefore, users are not allowed to search unless they are logged in.
+    // Commented out now that CloudFlare applies to everyone.
+    // if (!$wgUser->isLoggedIn()) {
+    //  return array('', "<p><font color=\"red\">You must be signed in to search.</font></p>");
+    // }
       
     // An alternate approach was attempted. It rejected searches submitted within X seconds of a search from the same IP address range. 
     // The intent was to effectively shut down searches from bots (after the first one) while allowing searches from human users not logged in.
@@ -1866,9 +1868,7 @@ END;
     // The default retention was used for IP addresses, which may have been part of the problem. 
     // If this approach is tried again, the default retention should be changed to be 1 second longer than THROTTLE_SECONDS.
 //      if (TimeSinceLastRequest::getSecondsBetween("search", true) < self::THROTTLE_SECONDS) {
-//        return array('', "<p><font color=\"red\">You may only submit one search every " . self::THROTTLE_SECONDS . " seconds when not logged in.</font></p>");
-//      }
-    }
+//        return array('', "<p><font color=\"red\">You may only submit one search every " . self::THROTTLE_SECONDS . " seconds when not logged in.</font></p>");   
           
 		// send the query to the search server
 //wfDebug("searchServerQuery=$searchServerQuery\n");
